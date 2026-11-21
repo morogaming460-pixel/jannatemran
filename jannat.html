@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ভালোবাসার ১০টি ধাপ - শুভ জন্মদিন সারপ্রাইজ ✨</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #040510;
+      color: #f8fafc;
+      font-family: 'Hind Siliguri', sans-serif;
+      overflow: hidden;
+      height: 100dvh;
+      width: 100vw;
+      user-select: none;
+    }
+
+    .serif-bn {
+      font-family: 'Noto Serif Bengali', serif;
+    }
+
+    .mono-code {
+      font-family: 'Fira Code', 'Hind Siliguri', monospace;
+    }
+
+    /* Fullscreen Cosmic Canvas */
+    #cosmicCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Animated Rose-Gold & Violet Glassmorphic Card */
+    .cinema-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(16, 18, 42, 0.72), rgba(28, 14, 38, 0.68));
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 1.75rem;
+      border: 1px solid rgba(251, 191, 36, 0.22);
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        inset 0 0 30px rgba(244, 114, 182, 0.08),
+        0 0 35px rgba(168, 85, 247, 0.16);
+    }
+
+    .cinema-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 1.75rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.45), rgba(244, 114, 182, 0.45), rgba(139, 92, 246, 0.45));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Neon Text Glows */
+    .glow-rose {
+      text-shadow: 0 0 14px rgba(244, 114, 182, 0.85), 0 0 32px rgba(236, 72, 153, 0.55);
+    }
+    .glow-gold {
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.85), 0 0 30px rgba(245, 158, 11, 0.5);
+    }
+    .glow-cyan {
+      text-shadow: 0 0 14px rgba(56, 189, 248, 0.85), 0 0 30px rgba(14, 165, 233, 0.5);
+    }
+
+    /* Step Section Transitions */
+    .step-section {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4.5rem 1.1rem 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(24px) scale(0.96);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 10;
+    }
+    .step-section.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Royal Romantic Button */
+    .royal-btn {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.32), rgba(168, 85, 247, 0.32), rgba(251, 191, 36, 0.24));
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      box-shadow: 0 0 24px rgba(236, 72, 153, 0.35), inset 0 0 12px rgba(255, 255, 255, 0.12);
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+    }
+    .royal-btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 34px rgba(236, 72, 153, 0.6), 0 0 18px rgba(251, 191, 36, 0.45);
+    }
+    .royal-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* STEP 1: 3D Ribbon Gift Box */
+    .gift-stage {
+      perspective: 900px;
+      cursor: pointer;
+    }
+    .gift-box-3d {
+      position: relative;
+      width: 140px;
+      height: 120px;
+      margin: 0 auto;
+      animation: floatBox 3.2s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    @keyframes floatBox {
+      0%, 100% { transform: translateY(0px) rotateY(-6deg); }
+      50% { transform: translateY(-14px) rotateY(6deg); }
+    }
+    .gift-lid {
+      position: absolute;
+      top: 0;
+      left: -6px;
+      width: 152px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ec4899, #9333ea);
+      border: 1px solid rgba(253, 224, 71, 0.7);
+      box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+      transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease;
+      z-index: 3;
+    }
+    .gift-lid::after {
+      content: "🎀";
+      position: absolute;
+      top: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.3rem;
+      filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.9));
+    }
+    .gift-base {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 140px;
+      height: 92px;
+      border-radius: 0 0 18px 18px;
+      background: linear-gradient(160deg, #be185d, #6b21a8);
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      box-shadow: 0 18px 45px rgba(236, 72, 153, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .gift-ribbon-v {
+      position: absolute;
+      width: 22px;
+      height: 100%;
+      background: linear-gradient(180deg, #fde047, #f59e0b);
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+    }
+    .gift-lock-badge {
+      position: relative;
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1.5px solid #fde047;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.85);
+      animation: lockPulse 1.8s infinite;
+    }
+    @keyframes lockPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.14); }
+    }
+    .gift-opened .gift-lid {
+      transform: translateY(-58px) rotate(-18deg) scale(1.06);
+      opacity: 0;
+    }
+    .gift-glow-core {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff, #fde047 45%, transparent 75%);
+      transition: transform 0.6s ease;
+      pointer-events: none;
+    }
+    .gift-opened .gift-glow-core {
+      transform: translateX(-50%) scale(2.4);
+    }
+
+    /* STEP 3: Floating 3D Hearts & Liquid Love Meter */
+    .floating-heart-btn {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), rgba(236, 72, 153, 0.35));
+      border: 1px solid rgba(244, 114, 182, 0.7);
+      box-shadow: 0 0 25px rgba(236, 72, 153, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      animation: bobHeart 3.4s ease-in-out infinite alternate;
+      transition: transform 0.25s ease, opacity 0.3s ease;
+    }
+    .floating-heart-btn:active {
+      transform: scale(1.35);
+    }
+    @keyframes bobHeart {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-20px) scale(1.08); }
+    }
+
+    .liquid-meter-fill {
+      background: linear-gradient(90deg, #ec4899, #a855f7, #fbbf24);
+      background-size: 200% 100%;
+      animation: shimmerFlow 2.5s linear infinite;
+      transition: width 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes shimmerFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* STEP 4: 3D Flip Memory Cards */
+    .memory-card {
+      perspective: 1000px;
+      height: 162px;
+      cursor: pointer;
+    }
+    .memory-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+    }
+    .memory-card.flipped .memory-card-inner {
+      transform: rotateY(180deg);
+    }
+    .memory-front, .memory-back {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 1.25rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .memory-front {
+      background: linear-gradient(145deg, rgba(24, 26, 58, 0.8), rgba(44, 18, 56, 0.75));
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    .memory-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(145deg, rgba(236, 72, 153, 0.28), rgba(139, 92, 246, 0.28));
+      border: 1px solid rgba(244, 114, 182, 0.65);
+      box-shadow: 0 0 26px rgba(236, 72, 153, 0.35);
+    }
+
+    /* STEP 5: Terminal Typewriter Cursor */
+    .code-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1.15em;
+      background-color: #f472b6;
+      vertical-align: middle;
+      margin-left: 2px;
+      animation: blinkCursor 0.85s infinite;
+    }
+    @keyframes blinkCursor {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    /* STEP 6: Realistic Multi-Tier Cake & Flame */
+    .candle-flame {
+      width: 16px;
+      height: 28px;
+      background: radial-gradient(ellipse at bottom, #ffffff 12%, #fef08a 45%, #f97316 82%, transparent 100%);
+      border-radius: 50% 50% 35% 35%;
+      box-shadow: 0 0 20px #fde047, 0 0 42px #f97316;
+      animation: flameDance 0.16s infinite alternate;
+      transform-origin: bottom center;
+    }
+    @keyframes flameDance {
+      0% { transform: scale(1) rotate(-3deg); }
+      100% { transform: scale(1.08, 0.92) rotate(3deg); }
+    }
+    .smoke-wisp {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(226, 232, 240, 0.65);
+      filter: blur(2px);
+      animation: smokeFloat 1.8s ease-out forwards;
+    }
+    @keyframes smokeFloat {
+      0% { opacity: 0.85; transform: translateY(0) scale(0.7); }
+      100% { opacity: 0; transform: translateY(-55px) translateX(12px) scale(2.6); }
+    }
+
+    /* STEP 7: Wax-Seal Envelope & Holographic VIP Card */
+    .holo-vip-card {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.24), rgba(236, 72, 153, 0.24), rgba(56, 189, 248, 0.22));
+      border: 1.5px solid rgba(253, 224, 71, 0.75);
+      box-shadow: 0 0 40px rgba(251, 191, 36, 0.35), inset 0 0 24px rgba(255, 255, 255, 0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .holo-vip-card::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+      transform: rotate(25deg);
+      animation: holoSweep 3.5s infinite;
+    }
+    @keyframes holoSweep {
+      0% { left: -60%; }
+      50%, 100% { left: 130%; }
+    }
+
+    /* STEP 8: Floating Sky Lanterns */
+    .wish-lantern {
+      position: absolute;
+      bottom: -90px;
+      width: 58px;
+      height: 76px;
+      border-radius: 18px 18px 8px 8px;
+      background: radial-gradient(circle at 50% 65%, #fef9c3, #fb923c 65%, #9a3412);
+      border: 1px solid rgba(254, 240, 138, 0.85);
+      box-shadow: 0 0 32px rgba(251, 146, 60, 0.9), 0 0 60px rgba(245, 158, 11, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #451a03;
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 4px;
+      animation: lanternAscend 7.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      pointer-events: none;
+    }
+    @keyframes lanternAscend {
+      0% { transform: translateY(0) scale(0.95) rotate(-3deg); opacity: 0.98; }
+      45% { transform: translateY(-52vh) scale(0.88) rotate(3deg); opacity: 0.98; }
+      100% { transform: translateY(-118vh) scale(0.62) rotate(-2deg); opacity: 0; }
+    }
+
+    /* STEP 9: Heartbeat Ring Countdown */
+    .heartbeat-ring {
+      animation: heartRingPulse 0.95s ease-out infinite;
+    }
+    @keyframes heartRingPulse {
+      0% { transform: scale(0.92); box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.75); }
+      35% { transform: scale(1.08); box-shadow: 0 0 0 24px rgba(244, 114, 182, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(244, 114, 182, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Multi-Layer Cosmic Canvas -->
+  <canvas id="cosmicCanvas"></canvas>
+
+  <!-- ==================== TOP CONTROL BAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-3 py-3 sm:px-6 gap-2">
+    <!-- Step Progress Badge -->
+    <div class="cinema-card px-3.5 py-1.5 rounded-full flex items-center gap-2 shrink-0">
+      <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span>
+      <span id="stepIndicatorBn" class="text-xs sm:text-sm font-semibold text-amber-200">ধাপ ১ / ১০</span>
+    </div>
+
+    <!-- Center Progress Pills (Desktop/Tablet) -->
+    <div id="topDotsBar" class="hidden md:flex items-center gap-1.5"></div>
+  </header>
+
+  <!-- ==================== ধাপ ১: জাদুকরী উপহারের বাক্স ==================== -->
+  <section id="step-1" class="step-section active">
+    <div class="text-center max-w-md mx-auto">
+      <p class="text-xs sm:text-sm tracking-[0.2em] text-amber-300 mb-2">শুধুমাত্র তোমার জন্য তৈরি একটি ডিজিটাল ভালোবাসা</p>
+      <h1 class="text-2xl sm:text-4xl font-bold serif-bn glow-rose mb-2">
+        শুভ জন্মদিন, <span class="recipient-name-slot text-amber-300">Jannat</span>
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-300 mb-9">ভেতরে লুকিয়ে আছে ১০টি ভালোবাসার অধ্যায়...</p>
+
+      <div onclick="unlockGiftBox()" class="gift-stage inline-flex flex-col items-center">
+        <div id="giftBox3D" class="gift-box-3d">
+          <div class="gift-glow-core"></div>
+          <div class="gift-lid"></div>
+          <div class="gift-base">
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-lock-badge">🔒</div>
+          </div>
+        </div>
+
+        <button class="mt-8 royal-btn px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white">
+          উপহারের বাক্সটি খুলতে স্পর্শ করো ✨
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ২: নক্ষত্রের বার্তা ==================== -->
+  <section id="step-2" class="step-section">
+    <div class="cinema-card p-7 sm:p-10 max-w-md w-full text-center">
+      <div class="text-4xl mb-3 animate-pulse">🌌💫</div>
+      <p class="text-xs tracking-[0.2em] text-pink-300 mb-2">অধ্যায় ০১ • নক্ষত্রের সাক্ষী</p>
+      <h2 class="text-2xl sm:text-3xl font-bold serif-bn leading-relaxed glow-gold mb-4">
+        “এই মহাবিশ্বের প্রতিটি তারা, প্রতিটি মুহূর্ত আমাকে তোমার কাছেই নিয়ে এসেছে...”
+      </h2>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-7">
+        প্রিয়         <span class="recipient-name-slot font-semibold text-pink-300">Jannat</span>, আজকের দিনটি শুধু একটি তারিখ নয়—এই দিনেই পৃথিবীতে এসেছিল আমার জীবনের সবচেয়ে সুন্দর মানুষটি।
+      </p>
+      <button onclick="goToStep(3)" class="royal-btn px-7 py-3 rounded-full text-sm sm:text-base font-semibold text-white">
+        পরবর্তী অধ্যায়ে চলো →
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৩: ভালোবাসার মিটার ==================== -->
+  <section id="step-3" class="step-section">
+    <div class="text-center max-w-md w-full z-20 pointer-events-none">
+      <p class="text-xs tracking-[0.2em] text-pink-300 mb-1">অধ্যায় ০২ • ভালোবাসার স্পন্দন</p>
+      <h2 class="text-2xl sm:text-3xl font-bold serif-bn glow-rose mb-2">ভাসমান ৫টি হৃদয় স্পর্শ করো</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mb-4">প্রতিটি হৃদয় ছুঁলে ভালোবাসার মিটার পূর্ণ হবে ও মিষ্টি সুর বাজবে</p>
+
+      <!-- Liquid Neon Love Meter -->
+      <div class="cinema-card p-3.5 rounded-2xl max-w-xs mx-auto">
+        <div class="flex justify-between text-xs font-semibold mb-1.5">
+          <span class="text-pink-200">ভালোবাসার মাত্রা</span>
+          <span id="lovePercentBn" class="text-amber-300 font-bold">০% ❤️</span>
+        </div>
+        <div class="w-full h-3.5 rounded-full bg-slate-900/90 overflow-hidden border border-pink-400/30 p-0.5">
+          <div id="loveMeterBar" class="liquid-meter-fill h-full rounded-full" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Hearts Layer -->
+    <div id="heartsLayer" class="fixed inset-0 z-10"></div>
+  </section>
+
+  <!-- ==================== ধাপ ৪: স্মৃতির অ্যালবাম (৩ডি ফ্লিপ কার্ড) ==================== -->
+  <section id="step-4" class="step-section">
+    <div class="max-w-xl w-full text-center">
+      <p class="text-xs tracking-[0.2em] text-amber-300 mb-1">অধ্যায় ০৩ • হৃদয়ের অ্যালবাম</p>
+      <h2 class="text-2xl sm:text-3xl font-bold serif-bn glow-cyan mb-1">তোমাকে ভালোবাসার ৩টি কারণ</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mb-5">প্রতিটি কার্ডে স্পর্শ করে ভেতরের কথাগুলো পড়ো</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-6">
+        <!-- Card 1 -->
+        <div class="memory-card" onclick="flipMemoryCard(this, 0)">
+          <div class="memory-card-inner">
+            <div class="memory-front">
+              <span class="text-3xl mb-2">🌸</span>
+              <span class="text-sm font-semibold text-amber-200">কার্ড #১ স্পর্শ করো</span>
+            </div>
+            <div class="memory-back">
+              <span class="text-2xl mb-1">😊</span>
+              <h3 class="font-bold text-pink-200 text-base mb-1">তোমার মিষ্টি হাসি</h3>
+              <p class="text-xs text-slate-100 leading-relaxed">তোমার এক চিলতে হাসি আমার সব ক্লান্তি আর মন খারাপ মুহূর্তেই ভুলিয়ে দেয়।</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="memory-card" onclick="flipMemoryCard(this, 1)">
+          <div class="memory-card-inner">
+            <div class="memory-front">
+              <span class="text-3xl mb-2">✨</span>
+              <span class="text-sm font-semibold text-pink-200">কার্ড #২ স্পর্শ করো</span>
+            </div>
+            <div class="memory-back">
+              <span class="text-2xl mb-1">👀</span>
+              <h3 class="font-bold text-amber-200 text-base mb-1">তোমার মায়াবী চোখ</h3>
+              <p class="text-xs text-slate-100 leading-relaxed">তোমার চোখের দিকে তাকালে আমি আমার পুরো পৃথিবীর শান্তি খুঁজে পাই।</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="memory-card" onclick="flipMemoryCard(this, 2)">
+          <div class="memory-card-inner">
+            <div class="memory-front">
+              <span class="text-3xl mb-2">💫</span>
+              <span class="text-sm font-semibold text-sky-200">কার্ড #৩ স্পর্শ করো</span>
+            </div>
+            <div class="memory-back">
+              <span class="text-2xl mb-1">💑</span>
+              <h3 class="font-bold text-sky-200 text-base mb-1">আমাদের প্রতিটি মুহূর্ত</h3>
+              <p class="text-xs text-slate-100 leading-relaxed">তোমার সাথে কাটানো প্রতিটি সাধারণ মুহূর্ত আমার জীবনের শ্রেষ্ঠ স্মৃতি।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="step4ContinueBtn" onclick="goToStep(5)" class="royal-btn px-7 py-3 rounded-full text-sm font-semibold text-white opacity-40 pointer-events-none">
+        গোপন চিঠিটি পড়ো 💌 →
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৫: হৃদয়ের কোড চিঠি ==================== -->
+  <section id="step-5" class="step-section">
+    <div class="cinema-card max-w-md w-full overflow-hidden">
+      <!-- Terminal Top Bar -->
+      <div class="flex items-center justify-between px-4 py-2.5 bg-slate-950/80 border-b border-white/10">
+        <div class="flex items-center gap-1.5">
+          <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+        </div>
+        <span class="text-xs text-amber-200 mono-code">হৃদয়ের_চিঠি.love</span>
+        <span class="text-xs text-pink-400">❤️</span>
+      </div>
+
+      <div class="p-5 sm:p-6 text-left">
+        <div class="text-xs text-sky-300 mono-code mb-2">// তোমার জন্য হৃদয়ের গভীর থেকে লেখা...</div>
+        <p id="bengaliTypewriter" class="text-sm sm:text-base text-slate-100 leading-relaxed min-h-[165px] whitespace-pre-line"></p>
+      </div>
+
+      <div class="px-6 pb-5 text-center">
+        <button id="step5ContinueBtn" onclick="goToStep(6)" class="royal-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white opacity-0 pointer-events-none">
+          জন্মদিনের কেক কাটো 🎂 →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৬: জন্মদিনের কেক ও মোমবাতি ==================== -->
+  <section id="step-6" class="step-section">
+    <div class="cinema-card p-7 sm:p-9 max-w-md w-full text-center">
+      <p class="text-xs tracking-[0.2em] text-amber-300 mb-1">অধ্যায় ০৫ • শুভ কামনা</p>
+      <h2 class="text-2xl font-bold serif-bn glow-gold mb-1">চোখ বন্ধ করে একটি ইচ্ছা করো ✨</h2>
+      <p id="cakeInstructionBn" class="text-xs sm:text-sm text-slate-300 mb-7">নিচের বাটনে চাপ দিয়ে ফুঁ দিয়ে মোমবাতিটি নেভাও</p>
+
+      <!-- Multi-Tier Glowing Cake -->
+      <div class="relative flex flex-col items-center justify-center my-3">
+        <!-- Candle & Flame -->
+        <div class="relative flex flex-col items-center">
+          <div id="cakeFlame" class="candle-flame mb-1"></div>
+          <div id="cakeSmokeBox" class="absolute -top-4 flex justify-center"></div>
+          <div class="w-3.5 h-11 rounded-t-md bg-gradient-to-b from-amber-200 via-pink-400 to-rose-600 border border-white/40"></div>
+        </div>
+        <!-- Top Layer -->
+        <div class="w-36 h-12 rounded-t-2xl bg-gradient-to-r from-rose-500 via-pink-400 to-rose-500 border-b-4 border-amber-100 shadow-lg flex items-center justify-around px-3">
+          <span class="text-xs">🍓</span><span class="text-xs">💖</span><span class="text-xs">🍓</span>
+        </div>
+        <!-- Bottom Layer -->
+        <div class="w-52 h-14 rounded-b-2xl bg-gradient-to-r from-purple-950 via-indigo-900 to-purple-950 border-t border-amber-300/50 shadow-[0_12px_35px_rgba(236,72,153,0.45)] flex items-center justify-center">
+          <span class="text-xs tracking-wider text-amber-200 font-bold">শুভ জন্মদিন</span>
+        </div>
+      </div>
+
+      <button id="blowCandleBtn" onclick="extinguishCandle()" class="mt-6 royal-btn px-7 py-3 rounded-full text-sm sm:text-base font-semibold text-white">
+        ফুঁ দিয়ে মোমবাতি নেভাও 🌬️
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৭: রাজকীয় ভিআইপি পাস ==================== -->
+  <section id="step-7" class="step-section">
+    <div class="max-w-md w-full text-center">
+      <p class="text-xs tracking-[0.2em] text-pink-300 mb-1">অধ্যায় ০৬ • রাজকীয় উপহার</p>
+      <h2 class="text-2xl sm:text-3xl font-bold serif-bn glow-rose mb-5">তোমার জন্য বিশেষ রাজকীয় খাম</h2>
+
+      <div class="mx-auto max-w-sm">
+        <!-- Closed Wax-Seal Envelope -->
+        <div id="waxEnvelopeClosed" onclick="openRoyalEnvelope()" class="cinema-card p-8 cursor-pointer transition-transform hover:scale-105">
+          <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-rose-600 to-red-800 border-2 border-amber-300 flex items-center justify-center text-2xl shadow-[0_0_25px_rgba(225,29,72,0.75)]">
+            👑
+          </div>
+          <p class="text-base font-semibold text-amber-200 mb-1">সিলমোহর করা সোনালী খাম</p>
+          <p class="text-xs text-slate-300">খামটি খুলতে এখানে স্পর্শ করো 💌</p>
+        </div>
+
+        <!-- Revealed Holographic VIP Card -->
+        <div id="royalVipPass" class="hidden holo-vip-card rounded-3xl p-6 text-center">
+          <div class="text-xs tracking-[0.22em] text-amber-300 font-bold mb-1">★ আজীবন ভালোবাসার ভিআইপি পাস ★</div>
+          <h3 class="text-xl sm:text-2xl font-bold serif-bn text-white glow-gold mb-2">
+            অসীম ভালোবাসা, আদর ও সারাজীবন পাশে থাকার অঙ্গীকার
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-100 mb-4 leading-relaxed">
+            এই পাসটির মালিক: <span class="recipient-name-slot font-bold text-amber-300">আমার প্রাণপ্রিয় ❤️</span><br/>
+            যেকোনো সময়, যেকোনো আবদারে এটি ব্যবহারযোগ্য — মেয়াদ: অনন্তকাল।
+          </p>
+          <div class="text-xs text-amber-200 border-t border-amber-300/35 pt-2.5 flex justify-between items-center">
+            <span>প্রেরক: <strong class="sender-name-slot">তোমার চিরসাথী</strong></span>
+            <span>কোড: LOVE-∞</span>
+          </div>
+        </div>
+      </div>
+
+      <button id="step7ContinueBtn" onclick="goToStep(8)" class="hidden mt-6 royal-btn px-7 py-3 rounded-full text-sm font-semibold text-white">
+        আকাশপ্রদীপ ওড়াও 🏮 →
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৮: আকাশপ্রদীপ ওড়ানো ==================== -->
+  <section id="step-8" class="step-section">
+    <div id="lanternSkyLayer" class="fixed inset-0 z-10"></div>
+
+    <div class="cinema-card p-6 sm:p-8 max-w-md w-full text-center z-20 relative">
+      <p class="text-xs tracking-[0.2em] text-amber-300 mb-1">অধ্যায় ০৭ • রাতের আকাশে প্রার্থনা</p>
+      <h2 class="text-2xl font-bold serif-bn glow-gold mb-2">৩টি আকাশপ্রদীপ রাতের আকাশে ওড়াও</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mb-4">প্রতিটি প্রদীপে লেখা আছে তোমার জন্য আমার শুভকামনা</p>
+
+      <div class="mb-5 inline-block px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-sm font-semibold text-amber-200">
+        আকাশে উড়েছে: <span id="lanternCounterBn" class="text-white font-bold">০</span> / ৩ 🏮
+      </div>
+
+      <div>
+        <button id="releaseLanternBtn" onclick="launchWishLantern()" class="royal-btn px-7 py-3 rounded-full text-sm sm:text-base font-semibold text-white">
+          প্রথম আকাশপ্রদীপ ওড়াও (‘সুখ’) ✨
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ৯: হৃদস্পন্দন কাউন্টডাউন ==================== -->
+  <section id="step-9" class="step-section">
+    <div class="text-center">
+      <p class="text-xs sm:text-sm tracking-[0.25em] text-pink-300 mb-6">বিশেষ মুহূর্তের জন্য প্রস্তুত হও...</p>
+      <div id="heartbeatRingBox" class="heartbeat-ring w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full cinema-card border-2 border-pink-400/70 flex items-center justify-center">
+        <span id="countdownDigitBn" class="text-7xl sm:text-8xl font-bold serif-bn glow-rose">৩</span>
+      </div>
+      <p class="mt-6 text-xs text-slate-300">হৃদস্পন্দনের তালে তালে...</p>
+    </div>
+  </section>
+
+  <!-- ==================== ধাপ ১০: গ্র্যান্ড ফিনালে ==================== -->
+  <section id="step-10" class="step-section">
+    <div class="cinema-card p-6 sm:p-9 max-w-lg w-full text-center border border-amber-300/50 shadow-[0_0_60px_rgba(236,72,153,0.4)] mt-12 sm:mt-16">
+      <div class="text-3xl sm:text-4xl mb-2 animate-bounce">🎆🎂💖</div>
+      <p class="text-xs tracking-[0.25em] text-amber-300 mb-1">অনন্ত ভালোবাসার শুভেচ্ছা</p>
+      <h1 class="text-3xl sm:text-5xl font-bold serif-bn glow-rose mb-1">
+        শুভ জন্মদিন!
+      </h1>
+      <h2 class="recipient-name-slot text-2xl sm:text-3xl font-bold serif-bn glow-gold text-amber-300 mb-3">
+        Jannat
+      </h2>
+      <p id="finaleWishText" class="text-xs sm:text-sm text-slate-100 leading-relaxed mb-6">
+        তোমার আগামী দিনগুলো ভরে উঠুক অফুরন্ত হাসি, শান্তি আর ভালোবাসায়। প্রতিটি জন্মে আমি তোমাকেই আমার পাশে চাই। অনেক ভালোবাসি তোমায়! ✨
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <button onclick="spawnFireworkBurst()" class="royal-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white">
+          আরও আতশবাজি ফোটাও 🎇
+        </button>
+        <button onclick="restartExperience()" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs sm:text-sm font-medium text-sky-200 transition cursor-pointer">
+          আবার শুরু থেকে দেখো ↻
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /* =========================================================================
+       ১. বাংলা সংখ্যা রূপান্তর ও কাস্টমাইজেশন স্টেট
+       ========================================================================= */
+    const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    function toBnNum(num) {
+      return String(num).replace(/\d/g, d => bnDigits[d]);
+    }
+
+    const state = {
+      recipient: 'Jannat',
+      sender: 'Emran',
+      customWish: 'তোমার আগামী দিনগুলো ভরে উঠুক অফুরন্ত হাসি, শান্তি আর ভালোবাসায়। প্রতিটি জন্মে আমি তোমাকেই আমার পাশে চাই। অনেক ভালোবাসি তোমায়! ✨'
+    };
+
+    function applyPersonalization() {
+      document.querySelectorAll('.recipient-name-slot').forEach(el => {
+        el.innerText = state.recipient;
+      });
+      document.querySelectorAll('.sender-name-slot').forEach(el => {
+        el.innerText = state.sender;
+      });
+      document.getElementById('finaleWishText').innerText = state.customWish;
+    }
+
+    /* =========================================================================
+       ২. মাল্টি-লেয়ারড ওয়েব অডিও সাউন্ড ইঞ্জিন (Rich Music-Box, Harp & Heartbeat)
+       ========================================================================= */
+    let audioCtx = null;
+    let masterGain = null;
+    let isSoundMuted = false;
+    let ambientTimer = null;
+
+    function ensureAudio() {
+      if (!audioCtx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AC();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.85, audioCtx.currentTime);
+        masterGain.connect(audioCtx.destination);
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    // মিউজিক-বক্স / সেলেস্টা টোন (Rich Bell-like Harmonic Tone with Echo Tail)
+    function playMusicBoxNote(freq, duration = 0.9, volume = 0.14, delay = 0) {
+      if (isSoundMuted) return;
+      ensureAudio();
+      const now = audioCtx.currentTime + delay;
+
+      // Fundamental sine + overtone triangle for crystal bell timbre
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(freq, now);
+
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(freq * 2, now);
+
+      const overtoneGain = audioCtx.createGain();
+      overtoneGain.gain.setValueAtTime(0.22, now);
+
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.linearRampToValueAtTime(volume, now + 0.018);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+      osc1.connect(gain);
+      osc2.connect(overtoneGain);
+      overtoneGain.connect(gain);
+      gain.connect(masterGain);
+
+      osc1.start(now);
+      osc2.start(now);
+      osc1.stop(now + duration + 0.05);
+      osc2.stop(now + duration + 0.05);
+    }
+
+    // হার্প আর্পেজিও (Crystalline Unlock & Transition Sound)
+    function playSparkleArpeggio() {
+      const notes = [523.25, 659.25, 783.99, 987.77, 1046.50, 1318.51];
+      notes.forEach((f, i) => {
+        playMusicBoxNote(f, 0.75, 0.11, i * 0.065);
+      });
+    }
+
+    // বাস্তবসম্মত হৃদস্পন্দন শব্দ (Lub-Dub Heartbeat)
+    function playHeartbeatSound() {
+      if (isSoundMuted) return;
+      ensureAudio();
+      const now = audioCtx.currentTime;
+
+      const beat = (offset, startFreq, endFreq, vol) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(startFreq, now + offset);
+        osc.frequency.exponentialRampToValueAtTime(endFreq, now + offset + 0.16);
+
+        gain.gain.setValueAtTime(0.001, now + offset);
+        gain.gain.linearRampToValueAtTime(vol, now + offset + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + offset + 0.22);
+
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now + offset);
+        osc.stop(now + offset + 0.24);
+      };
+
+      beat(0, 95, 42, 0.35);     // Lub
+      beat(0.24, 115, 48, 0.28); // Dub
+    }
+
+    // ব্যাকগ্রাউন্ড রোমান্টিক মিউজিক-বক্স লুপ
+    function startRomanticAmbientLoop() {
+      if (ambientTimer) return;
+      const chords = [
+        [261.63, 329.63, 392.00, 493.88], // Cmaj7
+        [220.00, 261.63, 329.63, 392.00], // Am7
+        [174.61, 220.00, 261.63, 349.23], // Fmaj7
+        [196.00, 246.94, 293.66, 392.00]  // G6
+      ];
+      let stepIdx = 0;
+      ambientTimer = setInterval(() => {
+        if (!isSoundMuted && currentStep < 10) {
+          const chord = chords[Math.floor(stepIdx / 4) % chords.length];
+          const note = chord[stepIdx % chord.length];
+          playMusicBoxNote(note, 1.8, 0.032, 0);
+          stepIdx++;
+        }
+      }, 950);
+    }
+
+    // পলিফোনিক "Happy Birthday to You" মিউজিক-বক্স ও হারমোনি সুর (Step 10)
+    function playPolyphonicHappyBirthday() {
+      if (isSoundMuted) return;
+      ensureAudio();
+
+      const C4 = 261.63, D4 = 293.66, E4 = 329.63, F4 = 349.23,
+            G4 = 392.00, A4 = 440.00, Bb4 = 466.16, C5 = 523.25;
+      const C3 = 130.81, F3 = 174.61, G3 = 196.00;
+
+      // [MelodyFreq, BassHarmonyFreq, Duration]
+      const score = [
+        [C4, null, 0.35], [C4, null, 0.35],
+        [D4, C3, 0.7], [C4, G3, 0.7], [F4, F3, 0.7], [E4, C3, 1.25],
+
+        [C4, null, 0.35], [C4, null, 0.35],
+        [D4, G3, 0.7], [C4, G3, 0.7], [G4, C3, 0.7], [F4, F3, 1.25],
+
+        [C4, null, 0.35], [C4, null, 0.35],
+        [C5, C3, 0.7], [A4, F3, 0.7], [F4, F3, 0.7], [E4, C3, 0.7], [D4, G3, 1.25],
+
+        [Bb4, null, 0.35], [Bb4, null, 0.35],
+        [A4, F3, 0.7], [F4, C3, 0.7], [G4, G3, 0.7], [F4, F3, 1.6]
+      ];
+
+      let cursorTime = 0.15;
+      score.forEach(([melody, bass, dur]) => {
+        playMusicBoxNote(melody, dur * 1.15, 0.16, cursorTime);
+        playMusicBoxNote(melody * 2, dur * 0.9, 0.035, cursorTime + 0.02); // octave shimmer
+        if (bass) {
+          playMusicBoxNote(bass, dur * 1.4, 0.08, cursorTime);
+        }
+        cursorTime += dur * 0.78;
+      });
+    }
+
+    /* =========================================================================
+       ৩. ১০-ধাপের নেভিগেশন ও ইন্টারঅ্যাক্টিভ লজিক
+       ========================================================================= */
+    let currentStep = 1;
+    const totalSteps = 10;
+
+    // Build top progress dots
+    const topDotsBar = document.getElementById('topDotsBar');
+    for (let i = 1; i <= totalSteps; i++) {
+      const pill = document.createElement('div');
+      pill.id = `top-pill-${i}`;
+      pill.className = `h-1.5 rounded-full transition-all duration-300 ${i === 1 ? 'w-6 bg-amber-300' : 'w-2 bg-white/20'}`;
+      topDotsBar.appendChild(pill);
+    }
+
+    function updateStepHeader(step) {
+      document.getElementById('stepIndicatorBn').innerText = `ধাপ ${toBnNum(step)} / ${toBnNum(totalSteps)}`;
+      for (let i = 1; i <= totalSteps; i++) {
+        const pill = document.getElementById(`top-pill-${i}`);
+        if (!pill) continue;
+        if (i === step) {
+          pill.className = 'h-1.5 w-6 rounded-full bg-amber-300 shadow-[0_0_10px_#fde047] transition-all duration-300';
+        } else if (i < step) {
+          pill.className = 'h-1.5 w-2 rounded-full bg-pink-400 transition-all duration-300';
+        } else {
+          pill.className = 'h-1.5 w-2 rounded-full bg-white/20 transition-all duration-300';
+        }
+      }
+    }
+
+    function goToStep(next) {
+      document.getElementById(`step-${currentStep}`).classList.remove('active');
+      currentStep = next;
+      document.getElementById(`step-${currentStep}`).classList.add('active');
+      updateStepHeader(currentStep);
+
+      if (next !== 9 && next !== 10) {
+        playSparkleArpeggio();
+      }
+
+      if (next === 3) initStep3Hearts();
+      if (next === 5) runBengaliTypewriter();
+      if (next === 9) runHeartbeatCountdown();
+      if (next === 10) triggerGrandFinale();
+    }
+
+    // ধাপ ১: উপহারের বাক্স আনলক
+    let boxUnlocked = false;
+    function unlockGiftBox() {
+      if (boxUnlocked) return;
+      boxUnlocked = true;
+      ensureAudio();
+      startRomanticAmbientLoop();
+
+      const box = document.getElementById('giftBox3D');
+      box.classList.add('gift-opened');
+      box.querySelector('.gift-lock-badge').innerText = '🔓';
+
+      playSparkleArpeggio();
+      spawnCanvasBurst(window.innerWidth / 2, window.innerHeight / 2, '#fde047', 35);
+
+      setTimeout(() => {
+        goToStep(2);
+      }, 850);
+    }
+
+    // ধাপ ৩: ৫টি ভাসমান হৃদয় সংগ্রহ ও ভালোবাসার মিটার
+    let collectedHeartsCount = 0;
+    function initStep3Hearts() {
+      collectedHeartsCount = 0;
+      document.getElementById('lovePercentBn').innerText = '০% ❤️';
+      document.getElementById('loveMeterBar').style.width = '0%';
+
+      const layer = document.getElementById('heartsLayer');
+      layer.innerHTML = '';
+
+      const coords = [
+        { top: '34%', left: '16%' },
+        { top: '38%', left: '72%' },
+        { top: '62%', left: '20%' },
+        { top: '65%', left: '68%' },
+        { top: '76%', left: '44%' }
+      ];
+      const celestaScale = [523.25, 587.33, 659.25, 783.99, 1046.50];
+
+      coords.forEach((pos, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'floating-heart-btn';
+        btn.innerText = idx % 2 === 0 ? '💖' : '💗';
+        btn.style.top = pos.top;
+        btn.style.left = pos.left;
+        btn.style.animationDelay = `${idx * 0.35}s`;
+
+        btn.onclick = (e) => {
+          if (btn.dataset.done) return;
+          btn.dataset.done = 'true';
+
+          const rect = btn.getBoundingClientRect();
+          spawnCanvasBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, '#f472b6', 24);
+          playMusicBoxNote(celestaScale[collectedHeartsCount], 0.85, 0.18, 0);
+          playHeartbeatSound();
+
+          btn.style.transform = 'scale(1.8)';
+          btn.style.opacity = '0';
+          collectedHeartsCount++;
+
+          const pct = collectedHeartsCount * 20;
+          document.getElementById('lovePercentBn').innerText = `${toBnNum(pct)}% ❤️`;
+          document.getElementById('loveMeterBar').style.width = `${pct}%`;
+
+          if (collectedHeartsCount >= 5) {
+            setTimeout(() => goToStep(4), 750);
+          }
+        };
+        layer.appendChild(btn);
+      });
+    }
+
+    // ধাপ ৪: ৩ডি ফ্লিপ মেমোরি কার্ড
+    const flippedCards = new Set();
+    function flipMemoryCard(card, index) {
+      if (!card.classList.contains('flipped')) {
+        card.classList.add('flipped');
+        flippedCards.add(index);
+        playMusicBoxNote(440 + index * 130, 0.65, 0.14, 0);
+      }
+      if (flippedCards.size === 3) {
+        const btn = document.getElementById('step4ContinueBtn');
+        btn.classList.remove('opacity-40', 'pointer-events-none');
+      }
+    }
+
+    // ধাপ ৫: বাংলা টাইপরাইটার চিঠি
+    let letterTimer = null;
+    function runBengaliTypewriter() {
+      const letterBody =
+`প্রিয় ${state.recipient},
+
+আজকের এই বিশেষ দিনে তোমাকে শুধু এটুকুই বলতে চাই—
+তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায়।
+তোমার হাসিতে আমার পৃথিবী আলোকিত হয়,
+আর তোমার ভালোবাসায় আমি পূর্ণতা পাই।
+
+শুভ জন্মদিন আমার ভালোবাসা! ✨
+— ইতি, ${state.sender} ❤️`;
+
+      const target = document.getElementById('bengaliTypewriter');
+      const nextBtn = document.getElementById('step5ContinueBtn');
+      target.innerHTML = '';
+      nextBtn.classList.add('opacity-0', 'pointer-events-none');
+
+      let i = 0;
+      clearInterval(letterTimer);
+      letterTimer = setInterval(() => {
+        if (i < letterBody.length) {
+          target.innerHTML = letterBody.slice(0, i + 1) + '<span class="code-cursor"></span>';
+          if (i % 3 === 0) {
+            playMusicBoxNote(780 + (i % 6) * 45, 0.08, 0.025, 0);
+          }
+          i++;
+        } else {
+          clearInterval(letterTimer);
+          nextBtn.classList.remove('opacity-0', 'pointer-events-none');
+        }
+      }, 36);
+    }
+
+    // ধাপ ৬: মোমবাতি নেভানো
+    let isCandleOut = false;
+    function extinguishCandle() {
+      if (isCandleOut) return;
+      isCandleOut = true;
+
+      document.getElementById('cakeFlame').style.display = 'none';
+      playMusicBoxNote(240, 0.45, 0.12, 0);
+      playSparkleArpeggio();
+
+      const smokeBox = document.getElementById('cakeSmokeBox');
+      for (let i = 0; i < 5; i++) {
+        const wisp = document.createElement('div');
+        wisp.className = 'smoke-wisp';
+        wisp.style.animationDelay = `${i * 0.16}s`;
+        smokeBox.appendChild(wisp);
+      }
+
+      document.getElementById('cakeInstructionBn').innerText = 'তোমার মনের সব সুন্দর ইচ্ছা পূরণ হোক! ✨';
+      const btn = document.getElementById('blowCandleBtn');
+      btn.innerText = 'রাজকীয় খামটি খোলো 💌 →';
+      btn.onclick = () => goToStep(7);
+    }
+
+    // ধাপ ৭: সোনালী খাম ও ভিআইপি পাস
+    function openRoyalEnvelope() {
+      document.getElementById('waxEnvelopeClosed').classList.add('hidden');
+      document.getElementById('royalVipPass').classList.remove('hidden');
+      document.getElementById('step7ContinueBtn').classList.remove('hidden');
+      playSparkleArpeggio();
+      spawnCanvasBurst(window.innerWidth / 2, window.innerHeight / 2, '#fbbf24', 32);
+    }
+
+    // ধাপ ৮: ৩টি আকাশপ্রদীপ ওড়ানো (‘সুখ’, ‘ভালোবাসা’, ‘চিরসাথী’)
+    let lanternsSent = 0;
+    const lanternWishes = [
+      { label: 'সুখ ✨', nextBtn: 'দ্বিতীয় আকাশপ্রদীপ ওড়াও (‘ভালোবাসা’) ✨' },
+      { label: 'ভালোবাসা 💖', nextBtn: 'তৃতীয় আকাশপ্রদীপ ওড়াও (‘চিরসাথী’) ✨' },
+      { label: 'চিরসাথী 🌙', nextBtn: 'গ্র্যান্ড ফিনালে শুরু করো 🎆 →' }
+    ];
+
+    function launchWishLantern() {
+      if (lanternsSent >= 3) {
+        goToStep(9);
+        return;
+      }
+
+      const wish = lanternWishes[lanternsSent];
+      lanternsSent++;
+      document.getElementById('lanternCounterBn').innerText = toBnNum(lanternsSent);
+      playMusicBoxNote(440 + lanternsSent * 110, 1.1, 0.15, 0);
+
+      const sky = document.getElementById('lanternSkyLayer');
+      const lantern = document.createElement('div');
+      lantern.className = 'wish-lantern';
+      lantern.innerText = wish.label;
+      lantern.style.left = `${18 + (lanternsSent - 1) * 26 + (Math.random() * 8 - 4)}%`;
+      sky.appendChild(lantern);
+      setTimeout(() => lantern.remove(), 7600);
+
+      const btn = document.getElementById('releaseLanternBtn');
+      btn.innerText = wish.nextBtn;
+      if (lanternsSent === 3) {
+        btn.onclick = () => goToStep(9);
+      }
+    }
+
+    // ধাপ ৯: হৃদস্পন্দন কাউন্টডাউন (৩... ২... ১...)
+    function runHeartbeatCountdown() {
+      let count = 3;
+      const digitEl = document.getElementById('countdownDigitBn');
+      digitEl.innerText = toBnNum(count);
+      playHeartbeatSound();
+
+      const timer = setInterval(() => {
+        count--;
+        if (count > 0) {
+          digitEl.innerText = toBnNum(count);
+          playHeartbeatSound();
+        } else {
+          clearInterval(timer);
+          goToStep(10);
+        }
+      }, 1050);
+    }
+
+    // ধাপ ১০: গ্র্যান্ড ফিনালে (৩ডি পার্টিকেল হার্ট + আতশবাজি + হ্যাপি বার্থডে সুর)
+    let isGrandFinaleActive = false;
+    function triggerGrandFinale() {
+      isGrandFinaleActive = true;
+      playPolyphonicHappyBirthday();
+      for (let i = 0; i < 6; i++) {
+        setTimeout(spawnFireworkBurst, i * 420);
+      }
+    }
+
+    function restartExperience() {
+      isGrandFinaleActive = false;
+      boxUnlocked = false;
+      const box = document.getElementById('giftBox3D');
+      box.classList.remove('gift-opened');
+      box.querySelector('.gift-lock-badge').innerText = '🔒';
+
+      flippedCards.clear();
+      document.querySelectorAll('.memory-card').forEach(c => c.classList.remove('flipped'));
+      document.getElementById('step4ContinueBtn').classList.add('opacity-40', 'pointer-events-none');
+
+      isCandleOut = false;
+      document.getElementById('cakeFlame').style.display = 'block';
+      document.getElementById('cakeSmokeBox').innerHTML = '';
+      document.getElementById('cakeInstructionBn').innerText = 'নিচের বাটনে চাপ দিয়ে ফুঁ দিয়ে মোমবাতিটি নেভাও';
+      const blowBtn = document.getElementById('blowCandleBtn');
+      blowBtn.innerText = 'ফুঁ দিয়ে মোমবাতি নেভাও 🌬️';
+      blowBtn.onclick = extinguishCandle;
+
+      document.getElementById('waxEnvelopeClosed').classList.remove('hidden');
+      document.getElementById('royalVipPass').classList.add('hidden');
+      document.getElementById('step7ContinueBtn').classList.add('hidden');
+
+      lanternsSent = 0;
+      document.getElementById('lanternCounterBn').innerText = '০';
+      const lanternBtn = document.getElementById('releaseLanternBtn');
+      lanternBtn.innerText = 'প্রথম আকাশপ্রদীপ ওড়াও (‘সুখ’) ✨';
+      lanternBtn.onclick = launchWishLantern;
+
+      goToStep(1);
+    }
+
+    /* =========================================================================
+       ৪. ইন্টারঅ্যাক্টিভ ক্যানভাস: স্টারফিল্ড, শুটিং স্টার, স্টারডাস্ট ও ৩ডি হার্ট
+       ========================================================================= */
+    const canvas = document.getElementById('cosmicCanvas');
+    const ctx = canvas.getContext('2d');
+    let cw, ch;
+    let stars = [];
+    let bokehOrbs = [];
+    let shootingStars = [];
+    let particles = [];
+    let heart3DPoints = [];
+    let heartRotation = 0;
+
+    function initHeart3DPoints() {
+      heart3DPoints = [];
+      const total = 150;
+      for (let i = 0; i < total; i++) {
+        const t = (Math.PI * 2 * i) / total;
+        // Parametric 3D-layered heart curve
+        const x = 16 * Math.pow(Math.sin(t), 3);
+        const y = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+        const z = (Math.random() - 0.5) * 6;
+        heart3DPoints.push({ x, y, z, color: i % 2 === 0 ? '#f472b6' : '#fde047' });
+      }
+    }
+
+    function resizeCosmicCanvas() {
+      cw = canvas.width = window.innerWidth;
+      ch = canvas.height = window.innerHeight;
+
+      stars = Array.from({ length: 110 }, () => ({
+        x: Math.random() * cw,
+        y: Math.random() * ch,
+        r: Math.random() * 1.6 + 0.3,
+        phase: Math.random() * Math.PI * 2,
+        speed: Math.random() * 0.02 + 0.006
+      }));
+
+      bokehOrbs = Array.from({ length: 14 }, () => ({
+        x: Math.random() * cw,
+        y: Math.random() * ch,
+        r: Math.random() * 45 + 20,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: -Math.random() * 0.35 - 0.1,
+        hue: Math.random() > 0.5 ? '236, 72, 153' : '251, 191, 36'
+      }));
+    }
+
+    window.addEventListener('resize', resizeCosmicCanvas);
+    resizeCosmicCanvas();
+    initHeart3DPoints();
+
+    // Interactive Stardust Trail on Pointer Move
+    function addStardust(x, y) {
+      for (let i = 0; i < 2; i++) {
+        particles.push({
+          x,
+          y,
+          vx: (Math.random() - 0.5) * 1.4,
+          vy: (Math.random() - 0.5) * 1.4 - 0.4,
+          alpha: 0.95,
+          size: Math.random() * 2.2 + 0.8,
+          color: Math.random() > 0.4 ? '#fde047' : '#f472b6',
+          gravity: 0.01
+        });
+      }
+    }
+    window.addEventListener('mousemove', e => addStardust(e.clientX, e.clientY));
+    window.addEventListener('touchmove', e => {
+      if (e.touches[0]) addStardust(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    function spawnCanvasBurst(x, y, color = '#f472b6', count = 30) {
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 * i) / count + Math.random() * 0.2;
+        const speed = Math.random() * 4.2 + 1.2;
+        particles.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          alpha: 1,
+          size: Math.random() * 2.6 + 1.1,
+          color,
+          gravity: 0.045
+        });
+      }
+    }
+
+    function spawnFireworkBurst() {
+      const fx = cw * (0.15 + Math.random() * 0.7);
+      const fy = ch * (0.12 + Math.random() * 0.35);
+      const palette = ['#f472b6', '#fde047', '#38bdf8', '#c084fc', '#fb7185'];
+      const chosen = palette[Math.floor(Math.random() * palette.length)];
+      playMusicBoxNote(160 + Math.random() * 140, 0.25, 0.06, 0);
+      spawnCanvasBurst(fx, fy, chosen, 48);
+    }
+
+    function renderCosmicLoop() {
+      ctx.fillStyle = 'rgba(4, 5, 16, 0.28)';
+      ctx.fillRect(0, 0, cw, ch);
+
+      // 1. Floating Romantic Bokeh Orbs
+      bokehOrbs.forEach(orb => {
+        orb.x += orb.vx;
+        orb.y += orb.vy;
+        if (orb.y < -60) orb.y = ch + 60;
+        if (orb.x < -60) orb.x = cw + 60;
+        if (orb.x > cw + 60) orb.x = -60;
+
+        const grad = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.r);
+        grad.addColorStop(0, `rgba(${orb.hue}, 0.09)`);
+        grad.addColorStop(1, `rgba(${orb.hue}, 0)`);
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(orb.x, orb.y, orb.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // 2. Twinkling Starfield
+      stars.forEach(s => {
+        s.phase += s.speed;
+        const alpha = 0.25 + Math.abs(Math.sin(s.phase)) * 0.75;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(248, 250, 252, ${alpha})`;
+        ctx.fill();
+      });
+
+      // 3. Occasional Shooting Star
+      if (Math.random() < 0.008) {
+        shootingStars.push({
+          x: Math.random() * cw * 0.8,
+          y: Math.random() * ch * 0.35,
+          vx: 7 + Math.random() * 4,
+          vy: 3.5 + Math.random() * 2,
+          life: 1
+        });
+      }
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const ss = shootingStars[i];
+        ss.x += ss.vx;
+        ss.y += ss.vy;
+        ss.life -= 0.025;
+        if (ss.life <= 0) {
+          shootingStars.splice(i, 1);
+          continue;
+        }
+        ctx.strokeStyle = `rgba(253, 224, 71, ${ss.life})`;
+        ctx.lineWidth = 1.8;
+        ctx.beginPath();
+        ctx.moveTo(ss.x, ss.y);
+        ctx.lineTo(ss.x - ss.vx * 4, ss.y - ss.vy * 4);
+        ctx.stroke();
+      }
+
+      // 4. Grand Finale 3D Rotating Particle Heart & Fireworks
+      if (isGrandFinaleActive) {
+        if (Math.random() < 0.04) spawnFireworkBurst();
+
+        heartRotation += 0.022;
+        const scale = Math.min(cw, ch) * 0.011;
+        const centerX = cw / 2;
+        const centerY = ch * 0.22;
+
+        heart3DPoints.forEach(pt => {
+          const rotX = pt.x * Math.cos(heartRotation) - pt.z * Math.sin(heartRotation);
+          const rotZ = pt.x * Math.sin(heartRotation) + pt.z * Math.cos(heartRotation);
+          const depth = 1 + rotZ * 0.03;
+
+          const px = centerX + rotX * scale * depth;
+          const py = centerY + pt.y * scale * depth;
+
+          ctx.beginPath();
+          ctx.arc(px, py, Math.max(1.2, 2.2 * depth), 0, Math.PI * 2);
+          ctx.fillStyle = pt.color;
+          ctx.globalAlpha = 0.85;
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+      }
+
+      // 5. Particles (Fireworks, Heart Bursts, Stardust)
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.alpha -= 0.017;
+
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+
+      requestAnimationFrame(renderCosmicLoop);
+    }
+
+    window.onload = function () {
+      applyPersonalization();
+      renderCosmicLoop();
+    };
+  </script>
+</body>
+</html>
